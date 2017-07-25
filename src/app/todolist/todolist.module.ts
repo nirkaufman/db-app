@@ -10,6 +10,7 @@ import { CounterComponent } from './counter/counter.component';
 import { ButtonComponent } from './button/button.component';
 import { TitleComponent } from './title/title.component';
 import { InputComponent } from './input/input.component';
+import { ItemComponent } from './item/item.component';
 
 @NgModule({
   imports     : [CommonModule],
@@ -23,7 +24,8 @@ import { InputComponent } from './input/input.component';
     CounterComponent,
     ButtonComponent,
     TitleComponent,
-    InputComponent],
+    InputComponent,
+    ItemComponent],
   exports     : [TodolistComponent]
 })
 export class TodolistModule { }
