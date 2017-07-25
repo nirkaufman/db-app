@@ -1,7 +1,5 @@
 import {Component} from '@angular/core';
-import {Item} from './item';
 import {ListService} from './list.service';
-import {LoggerService} from './logger.service';
 
 @Component({
   selector: 'app-todolist',
