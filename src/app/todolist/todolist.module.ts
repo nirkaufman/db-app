@@ -17,7 +17,13 @@ import { InputComponent } from './input/input.component';
     TodolistComponent,
     HeaderComponent,
     MainComponent,
-    FooterComponent, ListComponent, ToggleComponent, CounterComponent, ButtonComponent, TitleComponent, InputComponent],
+    FooterComponent,
+    ListComponent,
+    ToggleComponent,
+    CounterComponent,
+    ButtonComponent,
+    TitleComponent,
+    InputComponent],
   exports     : [TodolistComponent]
 })
 export class TodolistModule { }
