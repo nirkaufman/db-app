@@ -11,6 +11,7 @@ import { ButtonComponent } from './button/button.component';
 import { TitleComponent } from './title/title.component';
 import { InputComponent } from './input/input.component';
 import { ItemComponent } from './item/item.component';
+import {ListService} from './list.service';
 
 @NgModule({
   imports     : [CommonModule],
@@ -26,6 +27,7 @@ import { ItemComponent } from './item/item.component';
     TitleComponent,
     InputComponent,
     ItemComponent],
+  providers   : [ListService],
   exports     : [TodolistComponent]
 })
 export class TodolistModule { }

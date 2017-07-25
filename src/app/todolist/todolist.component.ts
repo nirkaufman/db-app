@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import {Item} from './item';
+import {ListService} from './list.service';
+import {LoggerService} from './logger.service';
 
 @Component({
   selector: 'app-todolist',
@@ -8,12 +10,12 @@ import {Item} from './item';
 
       <app-header>
         <app-title title="MY APP"></app-title>
-        <app-input (value)="addItem($event)"></app-input>
+        <app-input (value)="list.addItem($event)"></app-input>
       </app-header>
 
       <app-main>
         <app-toggle></app-toggle>
-        <app-list [items]="items"></app-list>
+        <app-list [items]="list.items"></app-list>
       </app-main>
 
       <app-footer>
@@ -27,14 +29,10 @@ import {Item} from './item';
 })
 export class TodolistComponent {
 
-  public items: Item[];
+  public list: ListService;
 
-  constructor() {
-    this.items  = [];
-  }
-
-  addItem(value) {
-    this.items.push(new Item(value))
+  constructor(list: ListService) {
+    this.list = list;
   }
 
 }
