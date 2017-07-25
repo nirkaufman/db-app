@@ -7,7 +7,7 @@ import {ListService} from './list.service';
     <section class="todoapp">
 
       <app-header>
-        <app-title title="MY APP"></app-title>
+        <app-title [title]="title"></app-title>
         <app-input (value)="list.addItem($event)"></app-input>
       </app-header>
 
@@ -17,8 +17,8 @@ import {ListService} from './list.service';
       </app-main>
 
       <app-footer>
-        <app-counter count="100"
-                     text="users"></app-counter>
+        <app-counter [count]="list.items | count:'completed':false"
+                     text="items"></app-counter>
         <app-button></app-button>
       </app-footer>
 
@@ -28,9 +28,11 @@ import {ListService} from './list.service';
 export class TodolistComponent {
 
   public list: ListService;
+  public title: string;
 
   constructor(list: ListService) {
-    this.list = list;
+    this.list  = list;
+    this.title = 'TODOS';
   }
 
 }

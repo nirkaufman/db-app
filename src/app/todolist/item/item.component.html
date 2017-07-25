@@ -1,9 +1,9 @@
 <li>
   <div class="view">
-    <input class="toggle" 
+    <input class="toggle"
            [checked]="item.completed"
            type="checkbox">
-    <label>{{ item.title }}</label>
+    <label>{{ item.title | low }}</label>
     <button (click)="itemClicked.emit(item)"
             class="destroy"></button>
   </div>

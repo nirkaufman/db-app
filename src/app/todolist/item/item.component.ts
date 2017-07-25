@@ -9,6 +9,5 @@ import {Item} from './../item';
 export class ItemComponent {
 
   @Input() item: Item;
-  @Output() itemClicked = new EventEmitter<Item>()
-
+  @Output() itemClicked = new EventEmitter<Item>();
 }

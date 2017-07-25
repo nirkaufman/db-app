@@ -16,6 +16,7 @@ export class ListService {
   }
 
   addItem(title: string): void {
-    this._items.push(new Item(title));
+    // this._items.push(new Item(title));
+    this._items = [ ...this._items, new Item(title) ];
   }
 }

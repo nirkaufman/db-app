@@ -12,9 +12,10 @@ import { TitleComponent } from './title/title.component';
 import { InputComponent } from './input/input.component';
 import { ItemComponent } from './item/item.component';
 import {ListService} from './list.service';
+import {UtilsModule} from '../utils/utils.module';
 
 @NgModule({
-  imports     : [CommonModule],
+  imports     : [CommonModule, UtilsModule],
   declarations: [
     TodolistComponent,
     HeaderComponent,
@@ -30,4 +31,4 @@ import {ListService} from './list.service';
   providers   : [ListService],
   exports     : [TodolistComponent]
 })
-export class TodolistModule { }
+export class TodolistModule {}
