@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-todolist',
-  templateUrl: './todolist.component.html',
+  selector: 'app-button',
+  templateUrl: './button.component.html',
   styles: []
 })
-export class TodolistComponent implements OnInit {
+export class ButtonComponent implements OnInit {
 
   constructor() { }
 
