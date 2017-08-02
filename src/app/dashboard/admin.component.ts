@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <p>
       admin Works!
     </p>
+    <app-product item="NIR"></app-product>  
   `,
   styles: []
 })

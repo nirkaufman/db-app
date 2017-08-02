@@ -1,19 +1,20 @@
 import {Routes} from '@angular/router';
-import {DashboardComponent} from './dashboard/dashboard.component';
 import {LoginComponent} from './login/login.component';
+import {DbGuardsService} from './db-guards.service';
 
 export const routes: Routes = [
   {
-    path     : '',
+    path      : '',
     redirectTo: 'login',
     pathMatch : 'full'
   },
   {
     path     : 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
-    path     : 'dashboard',
+    path          : 'dashboard',
+    // canActivate   : [DbGuardsService],
     loadChildren: './dashboard/dashboard.module#DashboardModule'
   },
 ];

@@ -6,6 +6,7 @@ import {ActivatedRoute} from '@angular/router';
     <p>
       dashboard Works!
     </p>
+    <app-product item="NIR"></app-product>
     <router-outlet></router-outlet>
   `,
   styles  : []

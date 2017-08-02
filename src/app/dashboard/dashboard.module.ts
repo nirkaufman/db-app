@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard.component';
 import {RouterModule} from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { ItemComponent } from './item/item.component';
+import { ProductComponent } from './product.component';
 
 @NgModule({
   imports: [
@@ -11,7 +13,7 @@ import { AdminComponent } from './admin.component';
         {path: '', component: AdminComponent}
       ])
   ],
-  declarations: [DashboardComponent, AdminComponent],
+  declarations: [DashboardComponent, AdminComponent, ItemComponent, ProductComponent],
   exports: [DashboardComponent]
 })
 export class DashboardModule { }
