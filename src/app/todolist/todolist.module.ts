@@ -13,9 +13,10 @@ import { InputComponent } from './input/input.component';
 import { ItemComponent } from './item/item.component';
 import {ListService} from './list.service';
 import {UtilsModule} from '../utils/utils.module';
+import {DbCoreModule} from '../db-core/db-core.module';
 
 @NgModule({
-  imports     : [CommonModule, UtilsModule],
+  imports     : [CommonModule, UtilsModule, DbCoreModule],
   declarations: [
     TodolistComponent,
     HeaderComponent,
@@ -28,7 +29,12 @@ import {UtilsModule} from '../utils/utils.module';
     TitleComponent,
     InputComponent,
     ItemComponent],
-  providers   : [ListService],
   exports     : [TodolistComponent]
 })
-export class TodolistModule {}
+export class TodolistModule {
+
+  constructor() {
+    console.log('TodolistModule Module');
+  }
+
+}

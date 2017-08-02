@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, Input, ChangeDetectorRef} from '@angular/core';
 
 @Component({
   selector: 'app-title',
@@ -6,4 +6,9 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 export class TitleComponent  {
   @Input() title: string;
+
+  constructor() {
+
+  }
+
 }

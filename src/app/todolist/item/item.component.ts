@@ -7,7 +7,6 @@ import {Item} from './../item';
   styles     : []
 })
 export class ItemComponent {
-
   @Input() item: Item;
   @Output() itemClicked = new EventEmitter<Item>();
 }
