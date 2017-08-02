@@ -1,32 +1,26 @@
+import {HttpClient} from '@angular/common/http';
 import {Component} from '@angular/core';
-import {ListService} from './todolist/list.service';
 
 @Component({
-  selector : 'app-root',
-  providers: [ListService],
-  // templateUrl: './app.component.html',
-  template : `
-    <input type="checkbox"
-           (change)="flag = $event.target.checked">
+  selector: 'app-root',
+  template: `
+    <h1 appAlert>App Root</h1>
 
-    <ng-container *ngIf="flag; then thenView  else elseView ">Hey Flag</ng-container>
-
-    <ng-template #thenView>
-      <h2>Then View</h2>
-    </ng-template>
-
-    <ng-template #elseView>
-      <h2>Else View</h2>
-    </ng-template>
-
-    <!--<h1 *appIf="flag">Hello Content</h1>-->
+    <app-child [text]="text"
+               (onText)="eventHandler()"></app-child>
   `
 })
 export class AppComponent {
 
-  public flag: boolean;
+  text = 'hey!';
 
-  constructor(public list: ListService) {
-
+  constructor(http: HttpClient) {
+    http.get('https://jsonplaceholder.typicode.com/todos')
+        .subscribe( response => console.log(response) )
   }
+
+  eventHandler() {
+    alert('event!')
+  }
+
 }
