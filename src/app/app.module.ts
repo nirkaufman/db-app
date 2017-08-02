@@ -1,19 +1,27 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-
+import {RouterModule, Router} from '@angular/router';
 import {AppComponent} from './app.component';
-import { ChildComponent } from './child.component';
-import { UpPipe } from './up.pipe';
-import { AlertDirective } from './alert.directive';
-import {LoggerService} from './logger.service';
-import {HttpClientModule} from '@angular/common/http';
+import {routes} from './app.routes';
+import {DashboardModule} from './dashboard/dashboard.module';
+import {LoginModule} from './login/login.module';
+
 
 @NgModule({
-  declarations: [AppComponent, ChildComponent, UpPipe, AlertDirective],
-  imports     : [BrowserModule, HttpClientModule],
-  providers   : [LoggerService],
+  declarations: [AppComponent],
+  imports     : [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    LoginModule
+  ],
+  providers: [],
   bootstrap   : [AppComponent]
 })
 
 export class AppModule {
+
+  constructor() {
+
+  }
+
 }
